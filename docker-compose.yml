@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  python:
+    image: python
+    container_name: wp-plugin-scrapper
+    stdin_open: true
+    tty: true
+    working_dir: /app
+    volumes:
+      - ./src/python:/app
+      - ./templates/technologies/wordpress:/templates
+    command: bash -c "pip install --upgrade pip && pip install -r requirements.txt && python main.py"
