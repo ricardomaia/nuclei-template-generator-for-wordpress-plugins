@@ -2,7 +2,8 @@
 
 This is a simple script to scrape plugins from the WordPress website and then use to generate Nuclei templates.
 
-![image](https://user-images.githubusercontent.com/1353811/205187743-b1ca14c2-57be-4e12-a49d-ef6fb7281ec8.png)
+![image](https://user-images.githubusercontent.com/1353811/205188352-090ff901-3a62-4654-a012-04059d7e7f3f.png)
+
 
 ## Generate or update templates
 
