@@ -4,6 +4,12 @@ This is a simple script to scrape WordPress plugins from the WordPress website a
 
 ## Usage
 
+(Windows)
 ```console
 docker compose up -d
+```
+
+(Linux)
+```console
+docker-compose up -d
 ```
