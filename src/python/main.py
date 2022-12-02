@@ -2,7 +2,7 @@ __author__ = "Ricardo Maia"
 __copyright__ = "Copyright 2022, Ricardo Maia"
 __credits__ = ["Ricardo Maia"]
 __license__ = "GPL v3"
-__version__ = "0.0.2"
+__version__ = "0.0.3"
 __email__ = "rsmaia@gmail.com"
 __status__ = "Development"
 
@@ -101,8 +101,7 @@ for page_number in range(1, 11):
         print(f"Description: {description}")
 
         # Write the plugin template to file
-        template = f'''
-id: wordpress-{name}
+        template = f'''id: wordpress-{name}
 
 info:
   name: {title} Detection
