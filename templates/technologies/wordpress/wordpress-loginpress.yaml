@@ -1,14 +1,14 @@
 id: wordpress-loginpress
 
 info:
-  name: LoginPress | Custom Login Page Customizer Detection
+  name: "LoginPress | Custom Login Page Customizer Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/loginpress/
   metadata:
     plugin_namespace: loginpress
-    wpscan: https://wpscan.com/plugin/loginpress        
+    wpscan: https://wpscan.com/plugin/loginpress
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/loginpress/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

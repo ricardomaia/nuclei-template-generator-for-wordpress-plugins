@@ -1,15 +1,15 @@
 id: wordpress-duplicate-page
 
 info:
-  name: Duplicate Page Detection
+  name: "Duplicate Page Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/duplicate-page/
   metadata:
     plugin_namespace: duplicate-page
-    wpscan: https://wpscan.com/plugin/duplicate-page        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/duplicate-page
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/duplicate-page/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

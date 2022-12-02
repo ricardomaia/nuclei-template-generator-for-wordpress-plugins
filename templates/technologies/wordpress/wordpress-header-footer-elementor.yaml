@@ -1,15 +1,15 @@
 id: wordpress-header-footer-elementor
 
 info:
-  name: Elementor Header & Footer Builder Detection
+  name: "Elementor Header & Footer Builder Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/header-footer-elementor/
   metadata:
     plugin_namespace: header-footer-elementor
-    wpscan: https://wpscan.com/plugin/header-footer-elementor        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/header-footer-elementor
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/header-footer-elementor/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

@@ -1,15 +1,15 @@
 id: wordpress-all-in-one-wp-security-and-firewall
 
 info:
-  name: All-In-One Security (AIOS) – Security and Firewall Detection
+  name: "All-In-One Security (AIOS) – Security and Firewall Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/all-in-one-wp-security-and-firewall/
   metadata:
     plugin_namespace: all-in-one-wp-security-and-firewall
-    wpscan: https://wpscan.com/plugin/all-in-one-wp-security-and-firewall        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/all-in-one-wp-security-and-firewall
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/all-in-one-wp-security-and-firewall/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

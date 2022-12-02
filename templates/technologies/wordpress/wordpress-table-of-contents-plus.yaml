@@ -1,14 +1,14 @@
 id: wordpress-table-of-contents-plus
 
 info:
-  name: Table of Contents Plus Detection
+  name: "Table of Contents Plus Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/table-of-contents-plus/
   metadata:
     plugin_namespace: table-of-contents-plus
-    wpscan: https://wpscan.com/plugin/table-of-contents-plus        
+    wpscan: https://wpscan.com/plugin/table-of-contents-plus
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/table-of-contents-plus/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

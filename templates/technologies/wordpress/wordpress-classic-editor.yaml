@@ -1,15 +1,15 @@
 id: wordpress-classic-editor
 
 info:
-  name: Classic Editor Detection
+  name: "Classic Editor Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/classic-editor/
   metadata:
     plugin_namespace: classic-editor
-    wpscan: https://wpscan.com/plugin/classic-editor        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/classic-editor
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/classic-editor/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

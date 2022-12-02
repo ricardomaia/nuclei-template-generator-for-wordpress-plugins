@@ -1,14 +1,14 @@
 id: wordpress-force-regenerate-thumbnails
 
 info:
-  name: Force Regenerate Thumbnails Detection
+  name: "Force Regenerate Thumbnails Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/force-regenerate-thumbnails/
   metadata:
     plugin_namespace: force-regenerate-thumbnails
-    wpscan: https://wpscan.com/plugin/force-regenerate-thumbnails        
+    wpscan: https://wpscan.com/plugin/force-regenerate-thumbnails
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/force-regenerate-thumbnails/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

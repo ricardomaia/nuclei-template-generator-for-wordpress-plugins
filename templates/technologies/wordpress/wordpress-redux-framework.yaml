@@ -1,15 +1,15 @@
 id: wordpress-redux-framework
 
 info:
-  name: Gutenberg Template and Pattern Library & Redux Framework Detection
+  name: "Gutenberg Template and Pattern Library & Redux Framework Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/redux-framework/
   metadata:
     plugin_namespace: redux-framework
-    wpscan: https://wpscan.com/plugin/redux-framework        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/redux-framework
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/redux-framework/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

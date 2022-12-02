@@ -1,14 +1,14 @@
 id: wordpress-post-types-order
 
 info:
-  name: Post Types Order Detection
+  name: "Post Types Order Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/post-types-order/
   metadata:
     plugin_namespace: post-types-order
-    wpscan: https://wpscan.com/plugin/post-types-order        
+    wpscan: https://wpscan.com/plugin/post-types-order
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/post-types-order/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

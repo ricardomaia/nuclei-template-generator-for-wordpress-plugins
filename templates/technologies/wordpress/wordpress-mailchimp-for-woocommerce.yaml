@@ -1,14 +1,14 @@
 id: wordpress-mailchimp-for-woocommerce
 
 info:
-  name: Mailchimp for WooCommerce Detection
+  name: "Mailchimp for WooCommerce Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/mailchimp-for-woocommerce/
   metadata:
     plugin_namespace: mailchimp-for-woocommerce
-    wpscan: https://wpscan.com/plugin/mailchimp-for-woocommerce        
+    wpscan: https://wpscan.com/plugin/mailchimp-for-woocommerce
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/mailchimp-for-woocommerce/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

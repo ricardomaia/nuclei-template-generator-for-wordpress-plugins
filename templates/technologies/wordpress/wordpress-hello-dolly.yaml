@@ -1,15 +1,15 @@
 id: wordpress-hello-dolly
 
 info:
-  name: Hello Dolly Detection
+  name: "Hello Dolly Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/hello-dolly/
   metadata:
     plugin_namespace: hello-dolly
-    wpscan: https://wpscan.com/plugin/hello-dolly        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/hello-dolly
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/hello-dolly/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

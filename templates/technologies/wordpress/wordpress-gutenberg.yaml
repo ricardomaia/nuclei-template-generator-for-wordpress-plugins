@@ -1,14 +1,14 @@
 id: wordpress-gutenberg
 
 info:
-  name: Gutenberg Detection
+  name: "Gutenberg Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/gutenberg/
   metadata:
     plugin_namespace: gutenberg
-    wpscan: https://wpscan.com/plugin/gutenberg        
+    wpscan: https://wpscan.com/plugin/gutenberg
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/gutenberg/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

@@ -1,15 +1,15 @@
 id: wordpress-custom-post-type-ui
 
 info:
-  name: Custom Post Type UI Detection
+  name: "Custom Post Type UI Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/custom-post-type-ui/
   metadata:
     plugin_namespace: custom-post-type-ui
-    wpscan: https://wpscan.com/plugin/custom-post-type-ui        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/custom-post-type-ui
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/custom-post-type-ui/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

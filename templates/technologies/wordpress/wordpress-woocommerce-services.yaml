@@ -1,15 +1,15 @@
 id: wordpress-woocommerce-services
 
 info:
-  name: WooCommerce Shipping & Tax Detection
+  name: "WooCommerce Shipping & Tax Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/woocommerce-services/
   metadata:
     plugin_namespace: woocommerce-services
-    wpscan: https://wpscan.com/plugin/woocommerce-services        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/woocommerce-services
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/woocommerce-services/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

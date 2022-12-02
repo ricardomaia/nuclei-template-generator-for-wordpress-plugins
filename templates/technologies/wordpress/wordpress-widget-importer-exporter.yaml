@@ -1,14 +1,14 @@
 id: wordpress-widget-importer-exporter
 
 info:
-  name: Widget Importer & Exporter Detection
+  name: "Widget Importer & Exporter Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/widget-importer-exporter/
   metadata:
     plugin_namespace: widget-importer-exporter
-    wpscan: https://wpscan.com/plugin/widget-importer-exporter        
+    wpscan: https://wpscan.com/plugin/widget-importer-exporter
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/widget-importer-exporter/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

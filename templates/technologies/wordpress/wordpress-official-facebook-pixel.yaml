@@ -1,14 +1,14 @@
 id: wordpress-official-facebook-pixel
 
 info:
-  name: Meta pixel for WordPress Detection
+  name: "Meta pixel for WordPress Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/official-facebook-pixel/
   metadata:
     plugin_namespace: official-facebook-pixel
-    wpscan: https://wpscan.com/plugin/official-facebook-pixel        
+    wpscan: https://wpscan.com/plugin/official-facebook-pixel
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/official-facebook-pixel/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

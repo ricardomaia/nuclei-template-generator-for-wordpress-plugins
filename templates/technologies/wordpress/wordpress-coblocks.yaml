@@ -1,14 +1,14 @@
 id: wordpress-coblocks
 
 info:
-  name: Page Builder Gutenberg Blocks – CoBlocks Detection
+  name: "Page Builder Gutenberg Blocks – CoBlocks Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/coblocks/
   metadata:
     plugin_namespace: coblocks
-    wpscan: https://wpscan.com/plugin/coblocks        
+    wpscan: https://wpscan.com/plugin/coblocks
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/coblocks/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

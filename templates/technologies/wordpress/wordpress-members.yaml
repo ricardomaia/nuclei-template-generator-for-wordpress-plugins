@@ -1,14 +1,14 @@
 id: wordpress-members
 
 info:
-  name: Members – Membership & User Role Editor Plugin Detection
+  name: "Members – Membership & User Role Editor Plugin Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/members/
   metadata:
     plugin_namespace: members
-    wpscan: https://wpscan.com/plugin/members        
+    wpscan: https://wpscan.com/plugin/members
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/members/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

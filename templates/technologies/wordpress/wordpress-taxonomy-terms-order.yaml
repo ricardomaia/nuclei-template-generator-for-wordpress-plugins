@@ -1,14 +1,14 @@
 id: wordpress-taxonomy-terms-order
 
 info:
-  name: Category Order and Taxonomy Terms Order Detection
+  name: "Category Order and Taxonomy Terms Order Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/taxonomy-terms-order/
   metadata:
     plugin_namespace: taxonomy-terms-order
-    wpscan: https://wpscan.com/plugin/taxonomy-terms-order        
+    wpscan: https://wpscan.com/plugin/taxonomy-terms-order
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/taxonomy-terms-order/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

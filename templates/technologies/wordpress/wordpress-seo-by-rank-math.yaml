@@ -1,15 +1,15 @@
 id: wordpress-seo-by-rank-math
 
 info:
-  name: Rank Math SEO Detection
+  name: "Rank Math SEO Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/seo-by-rank-math/
   metadata:
     plugin_namespace: seo-by-rank-math
-    wpscan: https://wpscan.com/plugin/seo-by-rank-math        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/seo-by-rank-math
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/seo-by-rank-math/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

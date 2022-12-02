@@ -1,14 +1,14 @@
 id: wordpress-really-simple-captcha
 
 info:
-  name: Really Simple CAPTCHA Detection
+  name: "Really Simple CAPTCHA Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/really-simple-captcha/
   metadata:
     plugin_namespace: really-simple-captcha
-    wpscan: https://wpscan.com/plugin/really-simple-captcha        
+    wpscan: https://wpscan.com/plugin/really-simple-captcha
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/really-simple-captcha/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

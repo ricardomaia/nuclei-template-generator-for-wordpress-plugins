@@ -1,14 +1,14 @@
 id: wordpress-wp-statistics
 
 info:
-  name: WP Statistics Detection
+  name: "WP Statistics Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/wp-statistics/
   metadata:
     plugin_namespace: wp-statistics
-    wpscan: https://wpscan.com/plugin/wp-statistics        
+    wpscan: https://wpscan.com/plugin/wp-statistics
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-statistics/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

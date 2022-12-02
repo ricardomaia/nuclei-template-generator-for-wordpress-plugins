@@ -1,15 +1,15 @@
 id: wordpress-envato-elements
 
 info:
-  name: Envato Elements – Photos & Elementor Templates Detection
+  name: "Envato Elements – Photos & Elementor Templates Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/envato-elements/
   metadata:
     plugin_namespace: envato-elements
-    wpscan: https://wpscan.com/plugin/envato-elements        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/envato-elements
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/envato-elements/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

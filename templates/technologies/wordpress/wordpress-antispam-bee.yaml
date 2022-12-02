@@ -1,15 +1,15 @@
 id: wordpress-antispam-bee
 
 info:
-  name: Antispam Bee Detection
+  name: "Antispam Bee Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/antispam-bee/
   metadata:
     plugin_namespace: antispam-bee
-    wpscan: https://wpscan.com/plugin/antispam-bee        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/antispam-bee
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/antispam-bee/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

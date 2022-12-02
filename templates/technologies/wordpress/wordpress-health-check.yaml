@@ -1,14 +1,14 @@
 id: wordpress-health-check
 
 info:
-  name: Health Check & Troubleshooting Detection
+  name: "Health Check & Troubleshooting Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/health-check/
   metadata:
     plugin_namespace: health-check
-    wpscan: https://wpscan.com/plugin/health-check        
+    wpscan: https://wpscan.com/plugin/health-check
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/health-check/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

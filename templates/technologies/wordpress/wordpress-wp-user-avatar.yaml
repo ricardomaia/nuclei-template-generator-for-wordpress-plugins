@@ -1,14 +1,14 @@
 id: wordpress-wp-user-avatar
 
 info:
-  name: Paid Membership, Ecommerce, User Registration, Login, User Profile & Restrict Content Plugin – ProfilePress Detection
+  name: "Paid Membership, Ecommerce, User Registration, Login, User Profile & Restrict Content Plugin – ProfilePress Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/wp-user-avatar/
   metadata:
     plugin_namespace: wp-user-avatar
-    wpscan: https://wpscan.com/plugin/wp-user-avatar        
+    wpscan: https://wpscan.com/plugin/wp-user-avatar
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-user-avatar/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

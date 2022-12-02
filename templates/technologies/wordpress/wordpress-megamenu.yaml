@@ -1,14 +1,14 @@
 id: wordpress-megamenu
 
 info:
-  name: Max Mega Menu Detection
+  name: "Max Mega Menu Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/megamenu/
   metadata:
     plugin_namespace: megamenu
-    wpscan: https://wpscan.com/plugin/megamenu        
+    wpscan: https://wpscan.com/plugin/megamenu
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/megamenu/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

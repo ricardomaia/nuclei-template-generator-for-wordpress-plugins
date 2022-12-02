@@ -1,15 +1,15 @@
 id: wordpress-instagram-feed
 
 info:
-  name: Smash Balloon Social Photo Feed Detection
+  name: "Smash Balloon Social Photo Feed Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/instagram-feed/
   metadata:
     plugin_namespace: instagram-feed
-    wpscan: https://wpscan.com/plugin/instagram-feed        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/instagram-feed
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/instagram-feed/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

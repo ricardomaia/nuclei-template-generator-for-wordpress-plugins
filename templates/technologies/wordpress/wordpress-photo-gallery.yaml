@@ -1,14 +1,14 @@
 id: wordpress-photo-gallery
 
 info:
-  name: Photo Gallery by 10Web – Mobile-Friendly Image Gallery Detection
+  name: "Photo Gallery by 10Web – Mobile-Friendly Image Gallery Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/photo-gallery/
   metadata:
     plugin_namespace: photo-gallery
-    wpscan: https://wpscan.com/plugin/photo-gallery        
+    wpscan: https://wpscan.com/plugin/photo-gallery
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/photo-gallery/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

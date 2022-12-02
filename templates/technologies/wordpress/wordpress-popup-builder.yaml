@@ -1,14 +1,14 @@
 id: wordpress-popup-builder
 
 info:
-  name: Popup Builder – Create highly converting, mobile friendly marketing popups. Detection
+  name: "Popup Builder – Create highly converting, mobile friendly marketing popups. Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/popup-builder/
   metadata:
     plugin_namespace: popup-builder
-    wpscan: https://wpscan.com/plugin/popup-builder        
+    wpscan: https://wpscan.com/plugin/popup-builder
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/popup-builder/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

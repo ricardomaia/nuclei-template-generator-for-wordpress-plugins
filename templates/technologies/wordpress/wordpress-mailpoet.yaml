@@ -1,14 +1,14 @@
 id: wordpress-mailpoet
 
 info:
-  name: MailPoet – emails and newsletters in WordPress Detection
+  name: "MailPoet – emails and newsletters in WordPress Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/mailpoet/
   metadata:
     plugin_namespace: mailpoet
-    wpscan: https://wpscan.com/plugin/mailpoet        
+    wpscan: https://wpscan.com/plugin/mailpoet
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/mailpoet/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

@@ -1,14 +1,14 @@
 id: wordpress-admin-menu-editor
 
 info:
-  name: Admin Menu Editor Detection
+  name: "Admin Menu Editor Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/admin-menu-editor/
   metadata:
     plugin_namespace: admin-menu-editor
-    wpscan: https://wpscan.com/plugin/admin-menu-editor        
+    wpscan: https://wpscan.com/plugin/admin-menu-editor
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/admin-menu-editor/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

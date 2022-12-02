@@ -1,14 +1,14 @@
 id: wordpress-click-to-chat-for-whatsapp
 
 info:
-  name: Click to Chat Detection
+  name: "Click to Chat Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/click-to-chat-for-whatsapp/
   metadata:
     plugin_namespace: click-to-chat-for-whatsapp
-    wpscan: https://wpscan.com/plugin/click-to-chat-for-whatsapp        
+    wpscan: https://wpscan.com/plugin/click-to-chat-for-whatsapp
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/click-to-chat-for-whatsapp/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

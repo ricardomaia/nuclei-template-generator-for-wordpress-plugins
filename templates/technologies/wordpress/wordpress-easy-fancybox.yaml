@@ -1,14 +1,14 @@
 id: wordpress-easy-fancybox
 
 info:
-  name: Easy FancyBox Detection
+  name: "Easy FancyBox Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/easy-fancybox/
   metadata:
     plugin_namespace: easy-fancybox
-    wpscan: https://wpscan.com/plugin/easy-fancybox        
+    wpscan: https://wpscan.com/plugin/easy-fancybox
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/easy-fancybox/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

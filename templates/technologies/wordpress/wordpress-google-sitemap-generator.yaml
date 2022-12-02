@@ -1,15 +1,15 @@
 id: wordpress-google-sitemap-generator
 
 info:
-  name: XML Sitemaps Detection
+  name: "XML Sitemaps Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/google-sitemap-generator/
   metadata:
     plugin_namespace: google-sitemap-generator
-    wpscan: https://wpscan.com/plugin/google-sitemap-generator        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/google-sitemap-generator
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/google-sitemap-generator/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

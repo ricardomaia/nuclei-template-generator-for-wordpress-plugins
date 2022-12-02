@@ -1,14 +1,14 @@
 id: wordpress-easy-google-fonts
 
 info:
-  name: Easy Google Fonts Detection
+  name: "Easy Google Fonts Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/easy-google-fonts/
   metadata:
     plugin_namespace: easy-google-fonts
-    wpscan: https://wpscan.com/plugin/easy-google-fonts        
+    wpscan: https://wpscan.com/plugin/easy-google-fonts
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/easy-google-fonts/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

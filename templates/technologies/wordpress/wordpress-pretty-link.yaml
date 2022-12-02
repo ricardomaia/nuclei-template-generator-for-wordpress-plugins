@@ -1,14 +1,14 @@
 id: wordpress-pretty-link
 
 info:
-  name: Pretty Links – Affiliate Links, Link Branding, Link Tracking & Marketing Plugin Detection
+  name: "Pretty Links – Affiliate Links, Link Branding, Link Tracking & Marketing Plugin Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/pretty-link/
   metadata:
     plugin_namespace: pretty-link
-    wpscan: https://wpscan.com/plugin/pretty-link        
+    wpscan: https://wpscan.com/plugin/pretty-link
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/pretty-link/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

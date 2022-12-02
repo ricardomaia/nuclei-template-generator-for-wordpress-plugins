@@ -1,14 +1,14 @@
 id: wordpress-unyson
 
 info:
-  name: Unyson Detection
+  name: "Unyson Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/unyson/
   metadata:
     plugin_namespace: unyson
-    wpscan: https://wpscan.com/plugin/unyson        
+    wpscan: https://wpscan.com/plugin/unyson
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/unyson/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

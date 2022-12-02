@@ -1,15 +1,15 @@
 id: wordpress-tinymce-advanced
 
 info:
-  name: Advanced Editor Tools (previously TinyMCE Advanced) Detection
+  name: "Advanced Editor Tools (previously TinyMCE Advanced) Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/tinymce-advanced/
   metadata:
     plugin_namespace: tinymce-advanced
-    wpscan: https://wpscan.com/plugin/tinymce-advanced        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/tinymce-advanced
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/tinymce-advanced/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

@@ -1,15 +1,15 @@
 id: wordpress-insert-headers-and-footers
 
 info:
-  name: WPCode – Insert Headers and Footers + Custom Code Snippets – WordPress Code Manager Detection
+  name: "WPCode – Insert Headers and Footers + Custom Code Snippets – WordPress Code Manager Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/insert-headers-and-footers/
   metadata:
     plugin_namespace: insert-headers-and-footers
-    wpscan: https://wpscan.com/plugin/insert-headers-and-footers        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/insert-headers-and-footers
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/insert-headers-and-footers/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

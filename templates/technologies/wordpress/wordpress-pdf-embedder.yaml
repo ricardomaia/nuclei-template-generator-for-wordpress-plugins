@@ -1,14 +1,14 @@
 id: wordpress-pdf-embedder
 
 info:
-  name: PDF Embedder Detection
+  name: "PDF Embedder Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/pdf-embedder/
   metadata:
     plugin_namespace: pdf-embedder
-    wpscan: https://wpscan.com/plugin/pdf-embedder        
+    wpscan: https://wpscan.com/plugin/pdf-embedder
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/pdf-embedder/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

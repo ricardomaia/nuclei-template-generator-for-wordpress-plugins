@@ -1,15 +1,15 @@
 id: wordpress-coming-soon
 
 info:
-  name: Website Builder by SeedProd — Theme Builder, Landing Page Builder, Coming Soon Page, Maintenance Mode Detection
+  name: "Website Builder by SeedProd — Theme Builder, Landing Page Builder, Coming Soon Page, Maintenance Mode Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/coming-soon/
   metadata:
     plugin_namespace: coming-soon
-    wpscan: https://wpscan.com/plugin/coming-soon        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/coming-soon
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/coming-soon/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

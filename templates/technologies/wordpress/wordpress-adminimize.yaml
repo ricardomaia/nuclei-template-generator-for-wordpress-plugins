@@ -1,14 +1,14 @@
 id: wordpress-adminimize
 
 info:
-  name: Adminimize Detection
+  name: "Adminimize Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/adminimize/
   metadata:
     plugin_namespace: adminimize
-    wpscan: https://wpscan.com/plugin/adminimize        
+    wpscan: https://wpscan.com/plugin/adminimize
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/adminimize/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

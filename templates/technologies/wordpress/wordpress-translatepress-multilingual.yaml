@@ -1,14 +1,14 @@
 id: wordpress-translatepress-multilingual
 
 info:
-  name: Translate Multilingual sites – TranslatePress Detection
+  name: "Translate Multilingual sites – TranslatePress Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/translatepress-multilingual/
   metadata:
     plugin_namespace: translatepress-multilingual
-    wpscan: https://wpscan.com/plugin/translatepress-multilingual        
+    wpscan: https://wpscan.com/plugin/translatepress-multilingual
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/translatepress-multilingual/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

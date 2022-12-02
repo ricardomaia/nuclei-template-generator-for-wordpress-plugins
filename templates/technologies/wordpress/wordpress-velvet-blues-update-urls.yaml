@@ -1,14 +1,14 @@
 id: wordpress-velvet-blues-update-urls
 
 info:
-  name: Velvet Blues Update URLs Detection
+  name: "Velvet Blues Update URLs Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/velvet-blues-update-urls/
   metadata:
     plugin_namespace: velvet-blues-update-urls
-    wpscan: https://wpscan.com/plugin/velvet-blues-update-urls        
+    wpscan: https://wpscan.com/plugin/velvet-blues-update-urls
   tags: tech,wordpress,plugin,top-200
 
 requests:
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/velvet-blues-update-urls/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200

@@ -1,15 +1,15 @@
 id: wordpress-wp-maintenance-mode
 
 info:
-  name: LightStart – Maintenance Mode, Coming Soon and Landing Page Builder Detection
+  name: "LightStart – Maintenance Mode, Coming Soon and Landing Page Builder Detection"
   author: ricardomaia
   severity: info
   reference:
     - https://wordpress.org/plugins/wp-maintenance-mode/
   metadata:
     plugin_namespace: wp-maintenance-mode
-    wpscan: https://wpscan.com/plugin/wp-maintenance-mode        
-  tags: tech,wordpress,plugin,top-100
+    wpscan: https://wpscan.com/plugin/wp-maintenance-mode
+  tags: tech,wordpress,plugin,top-100,top-200
 
 requests:
   - method: GET
@@ -17,11 +17,11 @@ requests:
     max-redirects: 2
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-maintenance-mode/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200
