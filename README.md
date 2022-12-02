@@ -1,5 +1,7 @@
 # Nuclei template generator for WordPress plugins
 
+[![🛠 Template Validate](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-validate.yml/badge.svg)](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-validate.yml)
+
 This is a simple script to scrape plugins from the WordPress website and then use to generate Nuclei templates.
 
 ![image](https://user-images.githubusercontent.com/1353811/205188352-090ff901-3a62-4654-a012-04059d7e7f3f.png)
