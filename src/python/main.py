@@ -42,7 +42,7 @@ for page_number in range(1, 11):
     articles = results.find_all("article", class_="plugin-card")
     
     # Set top_tag
-    top_tag = "top-100" if page_number <= 5 else "top-200"
+    top_tag = "top-100,top-200" if page_number <= 5 else "top-200"
 
     # Get each plugin in the page
     for article in articles:
