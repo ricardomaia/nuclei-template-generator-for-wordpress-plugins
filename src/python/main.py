@@ -2,7 +2,7 @@ __author__ = "Ricardo Maia"
 __copyright__ = "Copyright 2022, Ricardo Maia"
 __credits__ = ["Ricardo Maia"]
 __license__ = "GPL v3"
-__version__ = "0.0.3"
+__version__ = "0.0.4"
 __email__ = "rsmaia@gmail.com"
 __status__ = "Development"
 
