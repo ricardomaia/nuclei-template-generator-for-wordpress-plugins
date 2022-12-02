@@ -3,7 +3,7 @@ version: "3"
 services:
   python:
     image: python
-    container_name: wp-plugin-scrapper
+    container_name: template-generator
     stdin_open: true
     tty: true
     working_dir: /app
