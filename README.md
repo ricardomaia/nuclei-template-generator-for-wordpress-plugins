@@ -1,4 +1,4 @@
-# Nuclei template generator for Wordpress plugins
+# Nuclei template generator for WordPress plugins
 
 This is a simple script to scrape WordPress plugins from the WordPress website and then use to generate Nuclei templates.
 
