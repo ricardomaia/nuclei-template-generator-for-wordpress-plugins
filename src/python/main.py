@@ -35,19 +35,23 @@ for page_number in range(1, 11):
         "Cache-Control": "max-age=0",
         "Pragma": "no-cache",
     }).content
-    
+
     # Parse HTML
     soup = BeautifulSoup(html, 'html.parser')
     results = soup.find(id="main")
     articles = results.find_all("article", class_="plugin-card")
-    
+
     # Set top_tag
     top_tag = "top-100,top-200" if page_number <= 5 else "top-200"
 
     # Get each plugin in the page
     for article in articles:
 
-        title = article.find("h3", class_="entry-title").get_text()
+        full_title = article.find("h3", class_="entry-title").get_text()
+        regex_remove_quotes = r"[\"`]"
+        subst_remove_quotes = "'"
+        title = re.sub(regex_remove_quotes, subst_remove_quotes, full_title)
+
         link = article.find("a").get("href")
         name = re.search(regex, link).group(1)
 
@@ -61,7 +65,7 @@ for page_number in range(1, 11):
 
         sleep(0.2)
 
-        # Get the readme.txt file from SVN   
+        # Get the readme.txt file from SVN
         readme = requests.get(
             url=f"http://plugins.svn.wordpress.org/{name}/trunk/readme.txt",
             headers={
@@ -75,14 +79,13 @@ for page_number in range(1, 11):
                 "Pragma": "no-cache",
                 "Upgrade-Insecure-Requests": "1",
                 "Referer": "http://plugins.svn.wordpress.org/{name}/trunk/"}).content
-        
+
         # Extract the plugin version
         try:
             version = re.search(r"(?i)Stable.tag:\s+([\w.]+)",
                                 readme.decode("utf-8")).group(1)
         except:
             version = "N/A"
-
 
         # Extract the plugin description
         try:
@@ -104,7 +107,7 @@ for page_number in range(1, 11):
         template = f'''id: wordpress-{name}
 
 info:
-  name: {title} Detection
+  name: "{title} Detection"
   author: ricardomaia
   severity: info
   reference:
