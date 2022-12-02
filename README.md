@@ -26,6 +26,11 @@ docker-compose up -d
 nuclei -t templates/technologies/wordpress -u https://www.example.com
 ```
 
+### One target & only TOP 100
+```console
+nuclei -t templates/technologies/wordpress -tags top-100 -u https://www.example.com
+```
+
 ### Multiple targets
 ```console
 nuclei -t templates/technologies/wordpress -l list_of_targets.txt
