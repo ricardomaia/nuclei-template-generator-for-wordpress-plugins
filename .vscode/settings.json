@@ -3,4 +3,5 @@
         120
     ],
     "files.eol": "\n",
+    "editor.renderWhitespace": "all",
 }

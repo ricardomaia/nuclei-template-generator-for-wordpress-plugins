@@ -114,7 +114,7 @@ info:
     - https://wordpress.org/plugins/{name}/
   metadata:
     plugin_namespace: {name}
-    wpscan: https://wpscan.com/plugin/{name}        
+    wpscan: https://wpscan.com/plugin/{name}
   tags: tech,wordpress,plugin,{top_tag}
 
 requests:
@@ -123,11 +123,11 @@ requests:
     max-redirects: 2
     path:
       - "{{{{BaseURL}}}}/wp-content/plugins/{name}/readme.txt"
-    matchers-condition: and      
+    matchers-condition: and
     matchers:
       - type: regex
         regex:
-          - '(?i)Stable.Tag'
+          - "(?i)Stable.Tag"
       - type: status
         status:
           - 200
