@@ -123,22 +123,41 @@ requests:
     max-redirects: 2
     path:
       - "{{{{BaseURL}}}}/wp-content/plugins/{name}/readme.txt"
-    matchers-condition: and
-    matchers:
-      - type: regex
-        regex:
-          - "(?i)Stable.Tag"
-      - type: status
-        status:
-          - 200
+
+    payloads:
+      last_version: wordpress-{name}.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
+        internal: true
+        name: internal_detected_version
         group: 1
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+
+      - type: regex
+        part: body
+        name: detected_version
+        group: 1
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+
+    matchers-condition: or
+    matchers:
+      - type: dsl
+        name: "outdated_version"
+        dsl:
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
 '''
+        version_file = open(f"/templates/wordpress-{name}.txt", "w")
+        version_file.write(version)
+        version_file.close()
 
         # print(template)
         template_file = open(f"/templates/wordpress-{name}.yaml", "w")
