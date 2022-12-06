@@ -35,5 +35,4 @@ nuclei -t templates/technologies/wordpress -tags top-100 -u https://www.example.
 ```console
 nuclei -t templates/technologies/wordpress -l list_of_targets.txt
 ```
-
-![image](https://user-images.githubusercontent.com/1353811/205186958-af7b2d56-e6e4-4ff9-8b08-7cede4cd4908.png)
+![image](https://user-images.githubusercontent.com/1353811/205873579-e92e61d0-f81f-4648-9216-5f1fa22168bb.png)
