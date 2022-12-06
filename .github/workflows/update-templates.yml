@@ -15,6 +15,7 @@ jobs:
       - run: |
           echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
           echo "🖥️ The workflow is now ready to test your code on the runner."
+          ls -al
       - name: Install python3
         uses: actions/setup-python@v4
         with:
@@ -24,6 +25,7 @@ jobs:
           pip install -r ./src/python/requirements.txt
       - name: Templates Update
         run: |
+          mkdir -p ./templates/technologies/wordpress
           python3 ./src/python/main.py
       - name: Commit files
         run: |

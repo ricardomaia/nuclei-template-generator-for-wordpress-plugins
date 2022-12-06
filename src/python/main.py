@@ -155,12 +155,14 @@ requests:
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
 '''
-        version_file = open(f"/templates/wordpress-{name}.txt", "w")
+        version_file = open(
+            f"./templates/technologies/wordpress/wordpress-{name}.txt", "w")
         version_file.write(version)
         version_file.close()
 
         # print(template)
-        template_file = open(f"/templates/wordpress-{name}.yaml", "w")
+        template_file = open(
+            f"./templates/technologies/wordpress/wordpress-{name}.yaml", "w")
         template_file.write(template)
         template_file.close()
 
