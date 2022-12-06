@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 testing-targets.txt
 token.txt
+testing-report.json
