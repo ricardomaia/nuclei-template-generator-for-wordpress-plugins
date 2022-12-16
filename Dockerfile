@@ -1,9 +1,12 @@
 FROM ubuntu:latest AS wp-plugin-template-builder
-WORKDIR /app
 
-COPY ./src/python /app
+RUN useradd -g root -b /home/runner -d /home/runner -u 1000 -s /bin/bash -m runner
 
-ENV GOPATH $HOME/go
+COPY ./src/python /home/runner
+
+WORKDIR /home/runner
+
+ENV GOPATH /home/runner/go
 ENV PATH $PATH:/go/bin:$GOPATH/bin
 RUN apt update
 RUN apt install -y python3
@@ -17,8 +20,8 @@ RUN apt install curl -y
 RUN apt install wget -y
 
 # Install Python3 requirements
-RUN pip3 install --upgrade pip && pip3 install -r /app/requirements.txt
+RUN pip3 install --upgrade pip && pip3 install -r /home/runner/requirements.txt
 
 # Install Nuclei
 RUN go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-RUN nuclei -update-templates
+RUN chown -R runner:root /home/runner

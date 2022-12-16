@@ -7,11 +7,12 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: template-builder
+    user: root
     stdin_open: true
     tty: true
-    working_dir: /app
+    working_dir: /home/runner
     volumes:
-      - ./src/python:/app
-      - ./nuclei-templates/technologies/wordpress/plugins:/root/nuclei-templates/technologies/wordpress/plugins
-      - ./nuclei-templates/helpers/wordpress/plugins:/root/nuclei-templates/helpers/wordpress/plugins
-    command: bash -c "python3 main.py && nuclei -t technologies/wordpress/plugins -validate"
+      - "./src/python:/home/runner"
+      - "./nuclei-templates/technologies/wordpress/plugins:/home/runner/nuclei-templates/technologies/wordpress/plugins:rw"
+      - "./nuclei-templates/helpers/wordpress/plugins:/home/runner/nuclei-templates/helpers/wordpress/plugins:rw"
+    command: bash -c "python3 main.py"
