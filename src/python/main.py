@@ -48,7 +48,7 @@ for page_number in range(1, 11):
     for article in articles:
 
         full_title = article.find("h3", class_="entry-title").get_text()
-        regex_remove_quotes = r"[\"`]"
+        regex_remove_quotes = r"[\"`:]"
         subst_remove_quotes = "'"
         title = re.sub(regex_remove_quotes, subst_remove_quotes, full_title)
 
@@ -107,7 +107,7 @@ for page_number in range(1, 11):
         template = f'''id: wordpress-{name}
 
 info:
-  name: "{title} Detection"
+  name: {title} Detection
   author: ricardomaia
   severity: info
   reference:
@@ -115,7 +115,7 @@ info:
   metadata:
     plugin_namespace: {name}
     wpscan: https://wpscan.com/plugin/{name}
-  tags: tech,wordpress,plugin,{top_tag}
+  tags: tech,wordpress,wp-plugin,{top_tag}
 
 requests:
   - method: GET
@@ -125,7 +125,7 @@ requests:
       - "{{{{BaseURL}}}}/wp-content/plugins/{name}/readme.txt"
 
     payloads:
-      last_version: wordpress-{name}.txt
+      last_version: helpers/wordpress/plugins/{name}.txt
 
     extractors:
       - type: regex
@@ -156,13 +156,13 @@ requests:
           - '(?i)Stable.tag:\s?([\w.]+)'
 '''
         version_file = open(
-            f"./templates/technologies/wordpress/wordpress-{name}.txt", "w")
+            f"/root/nuclei-templates/helpers/wordpress/plugins/{name}.txt", "w")
         version_file.write(version)
         version_file.close()
 
         # print(template)
         template_file = open(
-            f"./templates/technologies/wordpress/wordpress-{name}.yaml", "w")
+            f"/root/nuclei-templates/technologies/wordpress/plugins/{name}.yaml", "w")
         template_file.write(template)
         template_file.close()
 

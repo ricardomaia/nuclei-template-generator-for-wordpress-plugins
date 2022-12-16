@@ -8,14 +8,13 @@ This is a simple script to scrape plugins from the WordPress website and then us
 
 ## Downloading templates
 
-
 ### With Nuclei
 
-You can consume these Nuclei templates directly from GitHub. 
+You can consume these Nuclei templates directly from GitHub.
 Define the environment variable `GITHUB_TEMPLATE_REPO` like this:
 
 ```console
-$ export GITHUB_TEMPLATE_REPO=ricardomaia/nuclei-template-generator-for-wordpress-plugins
+export GITHUB_TEMPLATE_REPO=ricardomaia/nuclei-template-generator-for-wordpress-plugins
 ```
 
 Update templates
@@ -35,9 +34,9 @@ $ nuclei -ut
 ```
 
 Using the templates
- 
-```
-$ nuclei -t github/nuclei-template-generator-for-wordpress-plugins/templates/technologies/wordpress -u https://www.example.com
+
+```console
+nuclei -t github/nuclei-template-generator-for-wordpress-plugins/templates/technologies/wordpress -u https://www.example.com
 ```
 
 ### Cloning this Repo
@@ -52,30 +51,35 @@ With this option, you would run the templates as in the following examples.
 ## Run templates
 
 ### One target
+
 ```console
-$ nuclei -t templates/technologies/wordpress -u https://www.example.com
+nuclei -t templates/technologies/wordpress -u https://www.example.com
 ```
 
 ### One target & only TOP 100
+
 ```console
-$ nuclei -t templates/technologies/wordpress -tags top-100 -u https://www.example.com
+nuclei -t templates/technologies/wordpress -tags top-100 -u https://www.example.com
 ```
 
 ### Multiple targets
-```console
-$ nuclei -t templates/technologies/wordpress -l list_of_targets.txt
-```
-![image](https://user-images.githubusercontent.com/1353811/205873579-e92e61d0-f81f-4648-9216-5f1fa22168bb.png)
 
+```console
+nuclei -t templates/technologies/wordpress -l list_of_targets.txt
+```
+
+![image](https://user-images.githubusercontent.com/1353811/205873579-e92e61d0-f81f-4648-9216-5f1fa22168bb.png)
 
 ## Generate or update templates
 
 (Windows)
+
 ```console
 docker compose up -d
 ```
 
 (Linux)
+
 ```console
-$ docker-compose up -d
+docker-compose up -d
 ```
