@@ -25,7 +25,6 @@ jobs:
           pip install -r ./src/python/requirements.txt
       - name: Templates Update
         run: |
-          mkdir -p ./templates/technologies/wordpress
           python3 ./src/python/main.py
       - name: Commit files
         run: |
