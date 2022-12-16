@@ -15,6 +15,7 @@ jobs:
       - run: |
           echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
           echo "🖥️ The workflow is now ready to test your code on the runner."
+          pwd
           ls -al
       - name: Install python3
         uses: actions/setup-python@v4
