@@ -36,7 +36,7 @@ $ nuclei -ut
 Using the templates
 
 ```console
-nuclei -t github/nuclei-template-generator-for-wordpress-plugins/templates/technologies/wordpress -u https://www.example.com
+nuclei -t github/nuclei-template-generator-for-wordpress-plugins/templates/technologies/wordpress/plugins -u https://www.example.com
 ```
 
 ### Cloning this Repo
@@ -59,13 +59,13 @@ nuclei -t templates/technologies/wordpress -u https://www.example.com
 ### One target & only TOP 100
 
 ```console
-nuclei -t templates/technologies/wordpress -tags top-100 -u https://www.example.com
+nuclei -ud ./nuclei-templates -t technologies/wordpress/plugins -tags top-100 -u https://www.example.com
 ```
 
 ### Multiple targets
 
 ```console
-nuclei -t templates/technologies/wordpress -l list_of_targets.txt
+nuclei -ud ./nuclei-templates -t technologies/wordpress -l list_of_targets.txt
 ```
 
 ![image](https://user-images.githubusercontent.com/1353811/205873579-e92e61d0-f81f-4648-9216-5f1fa22168bb.png)
