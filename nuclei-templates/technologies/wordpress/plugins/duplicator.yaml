@@ -1,7 +1,7 @@
 id: wordpress-duplicator
 
 info:
-  name: Duplicator – WordPress Migration Plugin Detection
+  name: Duplicator – WordPress Migration & Backup Plugin Detection
   author: ricardomaia
   severity: info
   reference:
