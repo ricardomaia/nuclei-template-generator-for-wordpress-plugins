@@ -29,19 +29,18 @@ jobs:
       - name: Update Templates
         run: |
           python3 .github/scripts/update-wordpress-plugin-templates.py
+          git status -s | wc -l | xargs -I {} echo CHANGES={} >> $GITHUB_OUTPUT
 
-      - name: Check if there are changes
-        id: changes
-        uses: UnicornGlobal/has-changes-action@v1.0.11
-
-      - name: Process changes
-        env:
-          PUSH_TOKEN: ${{ secrets.TOKEN }}
-        if: steps.changes.outputs.changed == 1
+      - name: Commit files
+        if: steps.readme-update.outputs.CHANGES > 0
         run: |
-          echo "📝 There are changes to commit."
-          git config --global user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add *
-          git commit -am "Update WordPress Plugin Templates"
-          git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Auto README Update [$(date)] :robot:" -a
+
+      - name: Push changes
+        if: steps.readme-update.outputs.CHANGES > 0
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.TOKEN }}
+          branch: ${{ github.ref }}
