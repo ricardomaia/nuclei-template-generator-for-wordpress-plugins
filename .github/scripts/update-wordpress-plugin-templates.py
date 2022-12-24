@@ -1,15 +1,4 @@
-__author__ = "Ricardo Maia"
-__copyright__ = "Copyright 2022, Ricardo Maia"
-__credits__ = ["Ricardo Maia"]
-__license__ = "GPL v3"
-__version__ = "0.0.5"
-__email__ = "rsmaia@gmail.com"
-__status__ = "Development"
-
-"""
-This is the main file of the project. It is the entry point of the application.
-"""
-
+#!/usr/bin/env python3
 from time import sleep
 from bs4 import BeautifulSoup
 import requests
@@ -41,7 +30,7 @@ for page_number in range(1, 11):
     results = soup.find(id="main")
     articles = results.find_all("article", class_="plugin-card")
 
-    # Set top_tag
+    # Setting the top tag
     top_tag = "top-100,top-200" if page_number <= 5 else "top-200"
 
     # Get each plugin in the page
