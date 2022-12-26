@@ -108,8 +108,6 @@ info:
 
 requests:
   - method: GET
-    redirects: true
-    max-redirects: 1
     path:
       - "{{{{BaseURL}}}}/wp-content/plugins/{name}/readme.txt"
 
