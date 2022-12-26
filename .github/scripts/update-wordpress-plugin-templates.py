@@ -144,14 +144,21 @@ requests:
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
 '''
-        version_file = open(
-            f"./nuclei-templates/helpers/wordpress/plugins/{name}.txt", "w")
+
+        # Dev environment
+        helper_path = "./nuclei-templates/helpers/wordpress/plugins/{name}.txt"
+        # Production environment
+        # helper_path = f"helpers/wordpress/plugins/{name}.txt"
+        version_file = open(helper_path, "w")
         version_file.write(version)
         version_file.close()
 
-        # print(template)
-        template_file = open(
-            f"./nuclei-templates/technologies/wordpress/plugins/{name}.yaml", "w")
+        # Dev environment
+        template_path = f"./nuclei-templates/technologies/wordpress/plugins/{name}.yaml"
+        # Production environment
+        # template_path = f"technologies/wordpress/plugins/{name}.yaml"
+        template_file = open(template_path, "w")  # Dev environment
+
         template_file.write(template)
         template_file.close()
 
