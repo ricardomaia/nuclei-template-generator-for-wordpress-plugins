@@ -25,5 +25,5 @@ jobs:
       - name: Template Validation
         run: |
           cp -r ${{ github.workspace }} $HOME
-          nuclei -t templates/technologies/wordpress -validate
+          nuclei -t technologies/wordpress/plugins -validate
           
