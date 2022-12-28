@@ -11,7 +11,7 @@ services:
     tty: true
     working_dir: /home/runner
     volumes:
-      - ./src/python:/home/runner/src/python
+      - ./.github/scripts:/home/runner/src/python
       - ./nuclei-templates/technologies/wordpress/plugins:/home/runner/nuclei-templates/technologies/wordpress/plugins
       - ./nuclei-templates/helpers/wordpress/plugins:/home/runner/nuclei-templates/helpers/wordpress/plugins
-    command: bash -c "python3 /home/runner/src/python/main.py && nuclei -ud /home/runner/nuclei-templates -t /home/runner/nuclei-templates/technologies/wordpress/plugins -validate"
+    command: bash -c "python3 /home/runner/src/python/update-wordpress-plugin-templates.py && nuclei -t /home/runner/nuclei-templates/technologies/wordpress/plugins -validate"
