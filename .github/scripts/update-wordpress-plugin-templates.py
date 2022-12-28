@@ -155,21 +155,13 @@ requests:
         if not os.path.exists(template_dir):
             os.makedirs(template_dir)
 
-        # Dev environment
-        #helper_path = f"./nuclei-templates/helpers/wordpress/plugins/{name}.txt"
-        # Production environment
         helper_path = f"helpers/wordpress/plugins/{name}.txt"
         version_file = open(helper_path, "w")
-
         version_file.write(version)
         version_file.close()
 
-        # Dev environment
-        #template_path = f"./nuclei-templates/technologies/wordpress/plugins/{name}.yaml"
-        # Production environment
         template_path = f"technologies/wordpress/plugins/{name}.yaml"
         template_file = open(template_path, "w")  # Dev environment
-
         template_file.write(template)
         template_file.close()
 
