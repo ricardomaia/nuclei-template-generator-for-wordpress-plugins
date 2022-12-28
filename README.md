@@ -1,6 +1,6 @@
 # Nuclei template generator for WordPress plugins
 
-[![🛠 Template Validate](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-validate.yml/badge.svg)](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-validate.yml) [![❄️ YAML Lint](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/syntax-checking.yml/badge.svg)](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/syntax-checking.yml) [![✨ WP Templates Update](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-update.yml/badge.svg?branch=main)](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-update.yml)
+[![🛠 Template Validate](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-validate.yml/badge.svg)](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/template-validate.yml) [![❄️ YAML Lint](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/syntax-checking.yml/badge.svg)](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/syntax-checking.yml) [![✨ Update WordPress Plugin Templates](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/update-wordpress-plugin-templates.yml/badge.svg)](https://github.com/ricardomaia/nuclei-template-generator-for-wordpress-plugins/actions/workflows/update-wordpress-plugin-templates.yml)
 
 This is a simple script to scrape plugins from the WordPress website and then use to generate Nuclei templates.
 
@@ -36,7 +36,7 @@ $ nuclei -ut
 Using the templates
 
 ```console
-nuclei -t github/nuclei-template-generator-for-wordpress-plugins/templates/technologies/wordpress/plugins -u https://www.example.com
+nuclei -t github/nuclei-template-generator-for-wordpress-plugins/technologies/wordpress/plugins -u https://www.example.com
 ```
 
 ### Cloning this Repo
@@ -53,7 +53,7 @@ With this option, you would run the templates as in the following examples.
 ### One target
 
 ```console
-nuclei -t templates/technologies/wordpress -u https://www.example.com
+nuclei -t technologies/wordpress/plugins -u https://www.example.com
 ```
 
 ### One target & only TOP 100
