@@ -83,3 +83,12 @@ docker compose up -d
 ```console
 docker-compose up -d
 ```
+
+## Filtering JSON results
+
+To get only outdated plugins.
+
+```console
+jq -r "select(.[\"matcher-name\"] != null) | .host, .info.metadata.plugin_namespace, .[\"extracted-results\"][], .[\"matcher-name\"], \"\n\" " < report.json
+```
+
