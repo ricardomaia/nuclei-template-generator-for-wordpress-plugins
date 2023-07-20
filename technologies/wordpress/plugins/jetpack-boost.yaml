@@ -1,23 +1,23 @@
-id: wordpress-woocommerce-payments
+id: wordpress-jetpack-boost
 
 info:
-  name: WooPayments – Fully Integrated Solution Built and Supported by Woo Detection
+  name: Jetpack Boost – Website Speed, Performance and Critical CSS Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/woocommerce-payments/
+    - https://wordpress.org/plugins/jetpack-boost/
   metadata:
-    plugin_namespace: woocommerce-payments
-    wpscan: https://wpscan.com/plugin/woocommerce-payments
+    plugin_namespace: jetpack-boost
+    wpscan: https://wpscan.com/plugin/jetpack-boost
   tags: tech,wordpress,wp-plugin,top-200
 
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/wp-content/plugins/woocommerce-payments/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/jetpack-boost/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/woocommerce-payments.txt
+      last_version: helpers/wordpress/plugins/jetpack-boost.txt
 
     extractors:
       - type: regex
