@@ -1,23 +1,23 @@
-id: wordpress-seo-by-rank-math
+id: wordpress-copy-delete-posts
 
 info:
-  name: Rank Math SEO with AI SEO Tools Detection
+  name: Duplicate Post Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/seo-by-rank-math/
+    - https://wordpress.org/plugins/copy-delete-posts/
   metadata:
-    plugin_namespace: seo-by-rank-math
-    wpscan: https://wpscan.com/plugin/seo-by-rank-math
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    plugin_namespace: copy-delete-posts
+    wpscan: https://wpscan.com/plugin/copy-delete-posts
+  tags: tech,wordpress,wp-plugin,top-200
 
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/wp-content/plugins/seo-by-rank-math/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/copy-delete-posts/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/seo-by-rank-math.txt
+      last_version: helpers/wordpress/plugins/copy-delete-posts.txt
 
     extractors:
       - type: regex
