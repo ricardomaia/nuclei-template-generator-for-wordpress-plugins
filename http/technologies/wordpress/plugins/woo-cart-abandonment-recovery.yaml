@@ -1,24 +1,24 @@
-id: wordpress-imagify
+id: wordpress-woo-cart-abandonment-recovery
 
 info:
-  name: Imagify – Optimize Images & Convert WebP & AVIF | Compress Images Easily Detection
+  name: WooCommerce Cart Abandonment Recovery Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/imagify/
+    - https://wordpress.org/plugins/woo-cart-abandonment-recovery/
   metadata:
-    plugin_namespace: imagify
-    wpscan: https://wpscan.com/plugin/imagify
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    plugin_namespace: woo-cart-abandonment-recovery
+    wpscan: https://wpscan.com/plugin/woo-cart-abandonment-recovery
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
 
     path:
-      - "{{BaseURL}}/wp-content/plugins/imagify/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/woo-cart-abandonment-recovery/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/imagify.txt
+      last_version: helpers/wordpress/plugins/woo-cart-abandonment-recovery.txt
 
     extractors:
       - type: regex
