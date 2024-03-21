@@ -1,24 +1,24 @@
-id: wordpress-creame-whatsapp-me
+id: wordpress-loginpress
 
 info:
-  name: Joinchat Detection
+  name: LoginPress | wp-login Custom Login Page Customizer Detection
   author: ricardomaia
   severity: info
   reference:
-    - https://wordpress.org/plugins/creame-whatsapp-me/
+    - https://wordpress.org/plugins/loginpress/
   metadata:
-    plugin_namespace: creame-whatsapp-me
-    wpscan: https://wpscan.com/plugin/creame-whatsapp-me
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+    plugin_namespace: loginpress
+    wpscan: https://wpscan.com/plugin/loginpress
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
 
     path:
-      - "{{BaseURL}}/wp-content/plugins/creame-whatsapp-me/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/loginpress/readme.txt"
 
     payloads:
-      last_version: helpers/wordpress/plugins/creame-whatsapp-me.txt
+      last_version: helpers/wordpress/plugins/loginpress.txt
 
     extractors:
       - type: regex
